@@ -1,0 +1,16 @@
+---
+- name: Install Spotify GPG Key for APT
+  apt_key:
+    url: "https://download.spotify.com/debian/pubkey_0D811D58.gpg"
+    state: present
+    
+- name: Install Spotify APT Repository
+  apt_repository:
+    repo: "deb http://repository.spotify.com stable non-free"
+    filename: spotify
+    state: present 
+    
+- name: Install spotify
+  apt:
+    name: spotify-client
+    state: present
