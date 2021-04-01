@@ -1,0 +1,5 @@
+---
+- name: Install prerequired packages
+  apt:
+    name: xclip
+    state: present

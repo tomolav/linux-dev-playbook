@@ -1,0 +1,5 @@
+---
+docker_keyring: "/usr/share/keyrings/docker-archive-keyring.gpg"
+docker_compose_repo: "https://github.com/docker/compose/releases/download"
+docker_compose_version: 1.28.6
+docker_compose_install_file: docker-compose-Linux-x86_64

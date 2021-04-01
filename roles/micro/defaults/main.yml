@@ -1,0 +1,3 @@
+micro_version: "2.0.8"
+micro_repo: "https://github.com/zyedidia/micro/releases/download"
+micro_install_file: micro-{{ micro_version }}-linux64.tar.gz

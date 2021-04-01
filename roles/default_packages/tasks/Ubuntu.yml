@@ -1,0 +1,21 @@
+---
+# WIP - Some of these packages should move to custom roles
+- name: Install default packages for Ubuntu
+  apt:
+   name:
+    - ubuntu-restricted-addons
+    - build-essential
+    - git
+    - openssh-server
+    - ufw
+    - curl
+    - jq
+    - tmux
+    - vim
+    - fish
+    - xclip
+    - ansible
+    - libvirt-daemon-system
+    - qemu-kvm
+    - virt-manager
+   state: present

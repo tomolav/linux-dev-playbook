@@ -1,0 +1,30 @@
+---
+- name: Install prerequired packages
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg
+      - lsb-release
+    state: present
+
+- name: Install Docker-CE GPG Key for APT
+  apt_key:
+    url: "https://download.docker.com/linux/ubuntu/gpg"
+    keyring: "{{ docker_keyring }}"
+    state: present
+    
+- name: Install Docker-CE APT Repository
+  apt_repository:
+    repo: "deb [arch=amd64 signed-by={{ docker_keyring }}] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
+    filename: docker
+    state: present 
+    
+- name: Install Docker-CE
+  apt:
+    name:
+     - docker-ce
+     - docker-ce-cli
+     - containerd.io
+    state: present

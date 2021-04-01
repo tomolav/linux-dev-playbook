@@ -1,0 +1,16 @@
+---
+- name: Include tasks for {{ ansible_distribution }}
+  include_tasks: "{{ ansible_distribution }}.yml"
+
+- name: Download micro editor
+  get_url:
+    url: "{{ micro_repo }}/v{{ micro_version }}/{{ micro_install_file }}"
+    dest: "/usr/local/src"
+
+- name: Extract micro-editor
+  unarchive:
+    src: "/usr/local/src/{{ micro_install_file }}"
+    dest: "/usr/local/bin"
+    owner: root
+    group: root
+    extra_opts: [ --strip-components=1, "micro-{{ micro_version }}/micro" ]
