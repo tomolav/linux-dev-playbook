@@ -17,5 +17,6 @@
     - ansible
     - libvirt-daemon-system
     - qemu-kvm
+    - qemu-efi
     - virt-manager
    state: present
