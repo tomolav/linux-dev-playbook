@@ -1,0 +1,2 @@
+---
+kubernetes_tools_keyring: "/usr/share/keyrings/kubernetes-archive-keyring.gpg"
