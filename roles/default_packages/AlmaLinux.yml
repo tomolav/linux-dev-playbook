@@ -1,0 +1,22 @@
+---
+- name: Install default packages for AlmaLinux
+  dnf:
+    name:
+#    - ubuntu-restricted-addons
+#    - build-essential
+    - git
+    - openssh-server
+#    - ufw
+    - curl
+    - jq
+    - tmux
+    - vim
+    - fish
+    - xclip
+    - ansible
+#    - libvirt-daemon-system
+#    - qemu-kvm
+#    - qemu-efi
+#    - virt-manager
+      
+

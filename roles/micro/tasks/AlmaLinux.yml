@@ -1,0 +1,5 @@
+---
+- name: Install prerequired packages
+  dnf:
+    name: xclip
+    state: present
