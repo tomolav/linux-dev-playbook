@@ -19,4 +19,6 @@
     - qemu-kvm
     - qemu-efi
     - virt-manager
+    - python3-venv
+    - python3-wheel
    state: present
