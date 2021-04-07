@@ -1,0 +1,22 @@
+---
+- name: Install prerequired packages
+  apt:
+    name: apt-transport-https
+    state: present
+
+- name: Install Microsoft Edge Insider GPG Key for APT
+  apt_key:
+    url: "https://packages.microsoft.com/keys/microsoft.asc"
+    keyring: "{{ code_keyring }}"
+    state: present
+    
+- name: Install Microsoft Edge Insider APT Repository
+  apt_repository:
+    repo: "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
+    filename: microsoft-edge-dev
+    state: present 
+    
+- name: Install Microsoft Edge Insider
+  apt:
+    name: microsoft-edge-dev
+    state: present

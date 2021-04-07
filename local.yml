@@ -14,9 +14,8 @@
   roles:
    - default_packages
    - code
+   - edge
    - micro
    - docker
-   - kubernetes-tools
    - golang
-   - spotify
   
