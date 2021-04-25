@@ -9,13 +9,23 @@
     apt:
       update_cache: yes
       cache_valid_time: 3600
-    when: ansible_os_family == "Debian"
 
-  roles:
-   - default_packages
-   - code
-   - edge
-   - micro
-   - docker
-   - golang
-  
+  tasks:
+  - include_role: name=default_packages
+    when: disable_default_packages is undefined
+  - include_role: name=code
+    when: disable_code is undefined
+  - include_role: name=edge
+    when: disable_edge is undefined
+  - include_role: name=micro
+    when: disable_micro is undefined
+  - include_role: name=docker
+    when: disable_docker is undefined
+  - include_role: name=golang
+    when: disable_golang is undefined
+  - include_role: name=libvirtd
+    when: disable_libvirtd is undefined
+  - include_role: name=python3
+    when: disable_python3 is undefined
+  - include_role: name=java
+    when: disable_java is undefined

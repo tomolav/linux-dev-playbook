@@ -1,7 +1,6 @@
 ---
 - name: Include tasks for {{ ansible_distribution }}
   include_tasks: "{{ ansible_distribution }}.yml"
-  when: ansible_distribution == "Ubuntu"
 
 - name: "Download Docker-compose {{ docker_compose_version }}"
   get_url:

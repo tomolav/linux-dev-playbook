@@ -1,0 +1,9 @@
+---
+- name: Install libvirtd and virt-manager
+  apt:
+   name:
+    - libvirt-daemon-system
+    - qemu-kvm
+    - qemu-efi
+    - virt-manager
+   state: present

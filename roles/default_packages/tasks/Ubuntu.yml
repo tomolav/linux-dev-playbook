@@ -13,12 +13,4 @@
     - tmux
     - vim
     - fish
-    - xclip
-    - ansible
-    - libvirt-daemon-system
-    - qemu-kvm
-    - qemu-efi
-    - virt-manager
-    - python3-venv
-    - python3-wheel
    state: present
