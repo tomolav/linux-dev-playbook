@@ -13,4 +13,5 @@
     - tmux
     - vim
     - fish
+    - htop
    state: present
