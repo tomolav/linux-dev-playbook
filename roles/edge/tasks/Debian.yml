@@ -18,5 +18,5 @@
     
 - name: Install Microsoft Edge Insider
   apt:
-    name: microsoft-edge-dev
+    name: microsoft-edge-beta
     state: present
