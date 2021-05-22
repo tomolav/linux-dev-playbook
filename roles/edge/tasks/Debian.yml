@@ -13,7 +13,7 @@
 - name: Install Microsoft Edge Insider APT Repository
   apt_repository:
     repo: "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
-    filename: microsoft-edge-dev
+    filename: microsoft-edge-beta
     state: present 
     
 - name: Install Microsoft Edge Insider
